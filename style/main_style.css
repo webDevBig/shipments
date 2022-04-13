@@ -223,6 +223,7 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     cursor: pointer;
+    display: none;
 }
 
 /*select*/
