@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*delete*/
+body {
+    font-family: 'Futura Std Book';
+    font-style: normal;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.all_shipments_box {
+    width: 657px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding: 72px 0 0;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.shipments_header {
+    width: 100%;
+    max-width: 657px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    border-bottom: 1px solid #ECF2F7;
+    padding: 17px 18px 17px 30px;
+    background-color: white;
+}
+
+.shipments_header .header_title {
+    font-size: 24px;
+    line-height: 29px;
+    color: #081E2E;
+    border-bottom: 1px solid #ECF2F7;
+    width: 70%;
+    max-width: 409px;
+    padding: 4px 0;
+}
+
+.shipments_header .btn_box {
+    display: flex;
+    align-items: center;
+}
+
+.shipments_header a {
+    cursor: pointer;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+.shipments_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 21px 30px 45px;
+}
+
+
+.all_shipments_box .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 30px;
+    border-bottom: 1px solid #ECF2F7;
+    width: 100%;
+    margin: 0 0 18px;
+}
+
+.all_shipments_box .box:last-of-type {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.all_shipments_box .row_box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.all_shipments_box .clm_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.all_shipments_box .content_title {
+    font-size: 16px;
+    line-height: 19px;
+    color: #081E2E;
+    margin: 0 0 12px;
+}
+
+.all_shipments_box .state_box {
+    margin: 4px 0 0;
+}
+
+/*Select input*/
+.all_shipments_box .select_input_box {
+    width: 100%;
+    height: 48px;
+    background-color: #F7FBFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 8px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select_input_box .inputs_list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list_item {
+    padding: 7px 12px;
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    font-size: 12px;
+    line-height: 14px;
+    color: #081E2E;
+}
+
+.list_item .icon_16 {
+    margin: 0 0 0 6px;
+}
+
+.select_input_box .icons_list {
+    display: flex;
+    align-items: center;
+    margin: 0 12px 0 0;
+}
+
+.select_input_box hr {
+    margin: 0 16px;
+    width: 1px;
+    height: 25px;
+    background-color: #ECF2F6;
+    border: none;
+    outline: none;
+}
+
+.all_shipments_box .time_title {
+    font-size: 14px;
+    line-height: 17px;
+    color: #76858F;
+}
+
+.all_shipments_box .time_box {
+    display: flex;
+    align-items: center;
+    margin: 12px 47px 0 0;
+}
+
+.all_shipments_box .time_box .time_title {
+    margin: 0 12px;
+}
+
+/*Date input*/
+.date_input {
+    width: 143px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/CalendarBlank.png);
+    background-position: 108px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    font-family: 'Futura Std Book';
+    cursor: pointer;
+}
+
+.date_input:active,
+.date_input:focus {
+    outline: none;
+}
+
+.date_input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.date_input::-webkit-calendar-picker-indicator {
+    background-image: url(../img/CalendarBlank.png);
+    background-position: 108px center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*select*/
+.select {
+    width: 290px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    padding: 0 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/arrow_down_gray.png);
+    background-position: 257px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select:active,
+.select:focus {
+    border: 1px solid #ECF2F7;
+    outline: none;
+}
+
+.icon_24 {
+    max-width: 24px;
+    cursor: pointer;
+}
+
+.icon_20 {
+    max-width: 20px;
+    cursor: pointer;
+}
+
+.icon_18 {
+    max-width: 18px;
+    cursor: pointer;
+}
+
+.icon_16 {
+    max-width: 16px;
+    cursor: pointer;
+}
+
+/*Small input*/
+.text_input {
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+}
+
+.text_input:focus,
+.text_input:active {
+    outline: none;
+}
+
+.text_input.large_input {
+    width: 42px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    padding: 0 12px;
+}
+
+.columns_box {
+    width: 274px;
+    min-height: 312px;
+    background: #F7FBFF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 26px 24px;
+}
+
+.columns_box .columns_item {
+    font-size: 12px;
+    line-height: 14px;
+    color: #081E2E;
+    background: #FFFFFF;
+    border: 1px dashed #ECF2F7;
+    padding: 4px 6px;
+    margin: 4px 0;
+}
+
+.columns_box .columns_item.active {
+    background: #53A5E0;
+    border-style: solid;
+    color: white;
+}
+
+.shipments_content .columns_arrow {
+    margin: 0 12px;
+}
+
+@media all and (max-width:600px) {
+    .all_shipments_box {
+        width: 100%;
+    }
+
+    .select {
+        width: 48%;
+        background-position: 95% center;
+    }
+
+    .state_box {
+        width: 100%;
+    }
+
+    .all_states .clm_box {
+        width: 30%;
+    }
+
+    .all_shipments_box .time_period {
+        flex-wrap: wrap;
+    }
+
+    .time_period .clm_box {
+        margin: 0 0 20px;
+        width: 100%;
+    }
+
+    .time_period .clm_box:last-of-type {
+        margin: 0;
+    }
+}
+
+@media all and (max-width:500px) {
+    .all_shipments_box .all_states {
+        flex-wrap: wrap;
+    }
+
+    .all_states .clm_box {
+        width: 188px;
+        margin: 10px 0;
+    }
+}
+
+@media all and (max-width:425px) {
+    .all_shipments_box .row_box {
+        flex-wrap: wrap;
+    }
+
+    .columns_box {
+        width: 100%;
+    }
+
+    .shipments_content .columns_arrow {
+        margin: 12px auto;
+        transform: rotate(90deg);
+    }
+
+    .select {
+        width: 100%;
+    }
+
+    .order_box .select:last-of-type {
+        margin: 20px 0 0;
+    }
+
+    .shipments_header {
+        max-width: 100vw;
+    }
+
+    .shipments_header .header_title {
+        width: auto;
+    }
+
+    .all_shipments_box .time_box {
+        flex-wrap: wrap;
+        margin: 12px 0 0;
+    }
+
+    .all_states .clm_box {
+        width: 100%;
+    }
+}
+
+@media all and (max-width:375px) {
+    .all_shipments_box .time_box {
+        flex-direction: column;
+    }
+
+    .all_shipments_box .time_box .time_title {
+        margin: 12px 0 0;
+    }
+
+    .all_shipments_box .time_box #dateto {
+        margin: 12px 0 0;
+    }
+}
+
+@media all and (max-width:335px) {
+    .shipments_header .header_title {
+        font-size: 21px;
+    }
+}

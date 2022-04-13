@@ -1,0 +1,61 @@
+/*State*/
+.state_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 188px;
+    height: 245px;
+    background: #F7FBFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.state_box .state_header {
+    padding: 7px 0px;
+    border-bottom: 1px solid #ECF2F7;
+    border-right: 1px solid #ECF2F7;
+    width: 100%;
+}
+
+.state_box .text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #081E2E;
+    padding: 6px 16px;
+    display: block;
+    cursor: pointer;
+}
+
+.state_box .state_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 7px 0;
+    border-right: 1px solid #ECF2F7;
+}
+
+/* width */
+.state_box::-webkit-scrollbar {
+    width: 9px;
+    background-color: white;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Track */
+.state_box::-webkit-scrollbar-track {
+    border-left: 3px solid white;
+}
+
+/* Handle */
+.state_box::-webkit-scrollbar-thumb {
+    background-color: #53A5E0;
+    border-radius: 7px;
+    border: 2px solid #ffffff;
+}
+

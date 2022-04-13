@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/state__style.css">
+    <link rel="stylesheet" href="style/main_style.css">
+    <link rel="stylesheet" href="style/font.css">
+</head>
+
+<body>
+    <div class="all_shipments_box">
+        <div class="shipments_header">
+            <p class="header_title">All Shipments</p>
+            <div class="btn_box">
+                <a><img alt="icon" src="img/FloppyDisk.png" class="icon icon_24"></a>
+                <a><img alt="icon" src="img/Trash.png" class="icon icon_24"></a>
+                <a><img alt="icon" src="img/Close.png" class="icon icon_24"></a>
+            </div>
+        </div>
+        <div class="shipments_content">
+            <div class="box">
+                <div class="row_box all_states">
+                    <div class="clm_box">
+                        <p class="content_title">Status</p>
+                        <div class="state_box">
+                            <div class="state_header"><a class="text">All statuses </a> </div>
+                            <div class="state_content">
+                                <a class="text">Complete</a>
+                                <a class="text">Failed </a>
+                                <a class="text">Ignored </a>
+                                <a class="text"> Insert Coins</a>
+                                <a class="text"> Not ready</a>
+                                <a class="text">Print Error </a>
+                                <a class="text">Complete</a>
+                                <a class="text">Failed </a>
+                                <a class="text">Ignored </a>
+                                <a class="text"> Insert Coins</a>
+                                <a class="text"> Not ready</a>
+                                <a class="text">Print Error </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clm_box">
+                        <p class="content_title">Channel</p>
+                        <div class="state_box">
+                            <div class="state_header"><a class="text">All channel </a> </div>
+                            <div class="state_content">
+                                <a class="text">Shopify</a>
+                                <a class="text">API </a>
+                                <a class="text">Manual </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clm_box">
+                        <p class="content_title">Channel</p>
+                        <div class="state_box">
+                            <div class="state_header"><a class="text">All channel </a> </div>
+                            <div class="state_content">
+                                <a class="text">Shopify</a>
+                                <a class="text">API </a>
+                                <a class="text">Manual </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p class="content_title">Destination</p>
+                <div class="select_input_box">
+                    <div class="inputs_list">
+                        <div class="list_item">
+                            <p>Italy</p>
+                            <img alt="" src="img/close-circle.png" class="icon_16">
+                        </div>
+                        <div class="list_item">
+                            <p>USA</p>
+                            <img alt="" src="img/close-circle.png" class="icon_16">
+                        </div>
+                    </div>
+                    <div class="icons_list">
+                        <img alt="" src="img/Close_gray.png" class="icon_18">
+                        <hr>
+                        <img alt="" src="img/arrow_down_gray.png" class="icon_18">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p class="content_title">Time periods</p>
+                <div class="row_box time_period" style="justify-content: flex-start;">
+                    <div class="clm_box">
+                        <p class="time_title">Select spacing</p>
+                        <div class="time_box">
+                            <input id="datefrom" type="date" value="2022-01-14" class="date_input" />
+                            <p class="time_title" style="color: #081E2E;">to</p>
+                            <input id="dateto" type="date" value="2022-01-14" class="date_input" />
+                        </div>
+                    </div>
+                    <div class="clm_box">
+                        <p class="time_title">A certain number of days</p>
+                        <div class="time_box">
+                            <input type="text" class="text_input large_input" value="31">
+                            <p class="time_title">days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p class="content_title">Columns</p>
+                <div class="row_box" style="align-items: center;">
+                    <div class="columns_box">
+                        <p class="columns_item active">Sustomer name</p>
+                        <p class="columns_item active">Shipment ID</p>
+                        <p class="columns_item active">Order ID</p>
+                        <p class="columns_item active">Carrier</p>
+                        <p class="columns_item active">Service</p>
+                        <p class="columns_item active">Channel</p>
+                        <p class="columns_item active">Status</p>
+                        <p class="columns_item active">Created</p>
+                    </div>
+                    <img alt="" src="img/carret_right_blue.png" class="icon_24 columns_arrow">
+                    <div class="columns_box">
+                        <p class="columns_item">Alt. 3rd Reference</p>
+                        <p class="columns_item">Weight</p>
+                        <p class="columns_item">Value</p>
+                        <p class="columns_item">City</p>
+                        <p class="columns_item">Country</p>
+                        <p class="columns_item">Telephone</p>
+                        <p class="columns_item">Terms of Trade</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box order_box">
+                <p class="content_title">Default order by</p>
+                <div class="row_box">
+                    <select class="select">
+                        <option>Channel</option>
+                        <option>Channel</option>
+                    </select>
+                    <select class="select">
+                        <option>Descending</option>
+                        <option>Descending</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box">
+                <p class="content_title">Archived Shipments</p>
+                <select class="select">
+                    <option>Show all shipments</option>
+                    <option>Show all shipments</option>
+                </select>
+            </div>
+            <div class="box">
+                <p class="content_title">Enabled For</p>
+                <div class="select_input_box">
+                    <div class="inputs_list">
+                        <div class="list_item">
+                            <p>All users</p>
+                            <img alt="" src="img/close-circle.png" class="icon_16">
+                        </div>
+                    </div>
+                    <div class="icons_list">
+                        <img alt="" src="img/Close_gray.png" class="icon_18">
+                        <hr>
+                        <img alt="" src="img/arrow_down_gray.png" class="icon_18">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body></html>
