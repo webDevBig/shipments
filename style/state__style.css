@@ -28,6 +28,33 @@
     padding: 6px 16px;
     display: block;
     cursor: pointer;
+    width: 100%;
+
+}
+
+.state_box .state_text {
+    position: relative;
+    transition: all .3s;
+}
+
+.state_box .state_text::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 0 2px 2px 0;
+    left: 0;
+    top: 0;
+    transition: all .3s;
+}
+
+.state_box .text.active {
+    background-color: #ECF2F6;
+}
+
+.state_box .text.active::before {
+    background-color: #53A5E0;
 }
 
 .state_box .state_content {
@@ -58,4 +85,3 @@
     border-radius: 7px;
     border: 2px solid #ffffff;
 }
-

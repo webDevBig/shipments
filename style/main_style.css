@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/*delete*/
 body {
     font-family: 'Futura Std Book';
     font-style: normal;
@@ -142,7 +141,7 @@ body {
     display: flex;
     align-items: center;
     cursor: default;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     color: #081E2E;
 }
@@ -313,7 +312,7 @@ body {
 }
 
 .columns_box .columns_item {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     color: #081E2E;
     background: #FFFFFF;

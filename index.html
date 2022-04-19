@@ -28,18 +28,18 @@
                         <div class="state_box">
                             <div class="state_header"><a class="text">All statuses </a> </div>
                             <div class="state_content">
-                                <a class="text">Complete</a>
-                                <a class="text">Failed </a>
-                                <a class="text">Ignored </a>
-                                <a class="text"> Insert Coins</a>
-                                <a class="text"> Not ready</a>
-                                <a class="text">Print Error </a>
-                                <a class="text">Complete</a>
-                                <a class="text">Failed </a>
-                                <a class="text">Ignored </a>
-                                <a class="text"> Insert Coins</a>
-                                <a class="text"> Not ready</a>
-                                <a class="text">Print Error </a>
+                                <a class="text state_text">Complete</a>
+                                <a class="text state_text">Failed </a>
+                                <a class="text state_text">Ignored </a>
+                                <a class="text state_text"> Insert Coins</a>
+                                <a class="text state_text"> Not ready</a>
+                                <a class="text state_text">Print Error </a>
+                                <a class="text state_text">Complete</a>
+                                <a class="text state_text">Failed </a>
+                                <a class="text state_text">Ignored </a>
+                                <a class="text state_text"> Insert Coins</a>
+                                <a class="text state_text"> Not ready</a>
+                                <a class="text state_text">Print Error </a>
                             </div>
                         </div>
                     </div>
@@ -171,6 +171,20 @@
         </div>
     </div>
 
+    <script>
+        const items = document.querySelectorAll('.state_text')
 
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                 item.classList.toggle('active')
+//                const target = document.querySelector(item.dataset.tabTarget)
+//
+//                items.forEach(item => {
+//                    item.classList.remove('active')
+//                })
+//                item.classList.add('active')
+            })
+        })
+    </script>
 
 </body></html>
