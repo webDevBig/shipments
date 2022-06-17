@@ -12,6 +12,14 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.shipments {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
 
 .all_shipments_box {
     width: 657px;
@@ -58,6 +66,25 @@ body {
     cursor: pointer;
     margin: 0 12px;
     text-decoration: none;
+    position: relative;
+    width: 24px;
+    height: 28.5px;
+}
+
+.shipments_header a img {
+    position: absolute;
+}
+
+.shipments_header a img.hover {
+    opacity: 0;
+}
+
+.shipments_header a:hover img {
+    opacity: 0;
+}
+
+.shipments_header a:hover img.hover {
+    opacity: 1;
 }
 
 .shipments_content {
@@ -175,7 +202,7 @@ body {
 .all_shipments_box .time_box {
     display: flex;
     align-items: center;
-    margin: 12px 47px 0 0;
+    margin: 12px 0px 0 0;
 }
 
 .all_shipments_box .time_box .time_title {
@@ -184,13 +211,13 @@ body {
 
 /*Date input*/
 .date_input {
-    width: 143px;
+    width: 127px;
     height: 40px;
     background: #FFFFFF;
     border: 1px solid #ECF2F7;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 0 16px;
+    padding: 0 10px;
     font-size: 14px;
     line-height: 17px;
     color: #081E2E;
@@ -200,7 +227,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url(../img/CalendarBlank.png);
-    background-position: 108px center;
+    background-position: 100px center;
     background-repeat: no-repeat;
     background-size: 18px;
     font-family: 'Futura Std Book';
@@ -410,8 +437,8 @@ body {
 .error_box.show {
     display: flex;
 }
-.error_img_box
-{
+
+.error_img_box {
     width: 32px;
     height: 32px;
     display: flex;
@@ -431,6 +458,126 @@ body {
     background-size: cover;
     width: 16px;
     height: 16px;
+}
+
+
+/*tab style*/
+
+
+.nav-tabs {
+    float: left;
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+    background: #F7FBFF;
+    /* Other colors / Stroke */
+    border: 1px solid #ECF2F7;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.nav-tabs > li {
+    float: left;
+    width: 50%;
+}
+
+.nav-tabs > li > a {
+    float: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 2px;
+    width: 100%;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    color: #A2B0BA;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: #eee #eee #ddd;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: white;
+    cursor: default;
+    background: #53A5E0;
+}
+
+.tab-content {
+    float: left;
+    width: 100%;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+    padding: 25px 0 0;
+}
+
+.tab-content > .tab-pane.active {
+    display: block;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+/*save view*/
+.save_box {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    max-width: 657px;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.shipments.save .save_box {
+    display: flex;
+}
+
+.shipments.save .all_shipments_box {
+    display: none;
+}
+
+.save_box .loader_icon {
+    max-width: 48px;
+    width: auto;
+    animation: loading_animation 1.5s linear infinite;
+}
+
+.save_box .title {
+    font-size: 24px;
+    line-height: 29px;
+    color: #081E2E;
+    margin: 16px 0 4px;
+}
+
+.save_box .text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #76858F;
+}
+
+@keyframes loading_animation {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 

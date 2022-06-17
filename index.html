@@ -11,13 +11,17 @@
 </head>
 
 <body>
+   <div class="shipments">
     <div class="all_shipments_box">
         <div class="shipments_header">
             <p class="header_title">All Shipments</p>
             <div class="btn_box">
-                <a><img alt="icon" src="img/FloppyDisk.png" class="icon icon_24"></a>
-                <a><img alt="icon" src="img/Trash.png" class="icon icon_24"></a>
-                <a><img alt="icon" src="img/Close.png" class="icon icon_24"></a>
+                <a class="save_btn"><img alt="icon" src="img/FloppyDisk.png" class="icon icon_24">
+                <img alt="icon" src="img/FloppyDisk_blue.png" class="icon icon_24 hover"></a>
+                <a><img alt="icon" src="img/Trash.png" class="icon icon_24">
+                <img alt="icon" src="img/Trash_blue.png" class="icon icon_24 hover"></a>
+                <a><img alt="icon" src="img/Close.png" class="icon icon_24">
+                <img alt="icon" src="img/Close_blue.png" class="icon icon_24 hover"></a>
             </div>
         </div>
         <div class="shipments_content">
@@ -164,9 +168,20 @@
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
             <div class="box">
                 <p class="content_title">Time periods</p>
-                <div class="row_box time_period" style="justify-content: flex-start;">
+                
+                <ul class="nav nav-tabs">
+			<li class="active"><a href="#tab-1">In date range</a></li>
+			<li class=""><a href="#tab-2">In the last days</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="tab-1" class="tab-pane active"> 
+				 <div class="row_box time_period">
                     <div class="clm_box">
                         <p class="time_title">Select spacing</p>
                         <div class="time_box">
@@ -175,6 +190,19 @@
                             <input id="dateto" type="date" value="2022-01-14" class="date_input" />
                         </div>
                     </div>
+                     <div class="clm_box">
+                        <p class="time_title">Sort by</p>
+                         <div class="time_box">
+                         <select class="select">
+                        <option>Creation date</option>
+                        <option>Creation date</option>
+                    </select>
+                         </div>
+                    </div>
+                </div>
+			</div> 
+			<div id="tab-2" class="tab-pane">
+				 <div class="row_box time_period">
                     <div class="clm_box">
                         <p class="time_title">A certain number of days</p>
                         <div class="time_box">
@@ -182,7 +210,22 @@
                             <p class="time_title">days</p>
                         </div>
                     </div>
+                     <div class="clm_box">
+                        <p class="time_title">Sort by</p>
+                         <div class="time_box">
+                         <select class="select">
+                        <option>Creation date</option>
+                        <option>Creation date</option>
+                    </select>
+                         </div>
+                    </div>
                 </div>
+			</div>
+		</div>
+                
+                
+                
+               
             </div>
             <div class="box">
                 <p class="content_title">Columns</p>
@@ -247,121 +290,15 @@
             </div>
         </div>
     </div>
-
-    <script>
-        let checkAll = document.getElementById("checkboxAll");
-        let el = document.getElementsByClassName("checkStatus");
-
-        const funcCheckAll = (bool) => {
-            for (let i = 0; i < el.length; i++) {
-                el[i].checked = bool;
-            }
-        };
-        const funcCheck = () => {
-            let count = 0;
-
-            for (let i = 0; i < el.length; i++) {
-                if (el[i].checked) {
-                    count += 1;
-                }
-            }
-
-            if (el.length === count) {
-                checkAll.checked = true;
-            } else {
-                checkAll.checked = false;
-            }
-        };
-
-        checkAll.addEventListener(
-            "click",
-            () => {
-                funcCheckAll(checkAll.checked);
-            },
-            false
-        );
-
-
-        let checkboxAllChanel = document.getElementById("checkboxAllChanel");
-        let checkChannel = document.getElementsByClassName("checkChannel");
-
-        const funcCheckAllChanel = (bool) => {
-            for (let i = 0; i < checkChannel.length; i++) {
-                checkChannel[i].checked = bool;
-            }
-        };
-        const funcCheckChanel = () => {
-            let count = 0;
-
-            for (let i = 0; i < checkChannel.length; i++) {
-                if (checkChannel[i].checked) {
-                    count += 1;
-                }
-            }
-
-            if (checkChannel.length === count) {
-                checkboxAllChanel.checked = true;
-            } else {
-                checkboxAllChanel.checked = false;
-            }
-        };
-
-        checkboxAllChanel.addEventListener(
-            "click",
-            () => {
-                funcCheckAllChanel(checkboxAllChanel.checked);
-            },
-            false
-        );
-
-
-        let checkboxAllChanel2 = document.getElementById("checkboxAllChanel2");
-        let checkChannel2 = document.getElementsByClassName("checkChannel2");
-
-        const funcCheckAllChanel2 = (bool) => {
-            for (let i = 0; i < checkChannel2.length; i++) {
-                checkChannel2[i].checked = bool;
-            }
-        };
-        const funcCheckChanel2 = () => {
-            let count = 0;
-
-            for (let i = 0; i < checkChannel2.length; i++) {
-                if (checkChannel2[i].checked) {
-                    count += 1;
-                }
-            }
-
-            if (checkChannel2.length === count) {
-                checkboxAllChanel2.checked = true;
-            } else {
-                checkboxAllChanel2.checked = false;
-            }
-        };
-
-        checkboxAllChanel2.addEventListener(
-            "click",
-            () => {
-                funcCheckAllChanel2(checkboxAllChanel2.checked);
-            },
-            false
-        );
-
-
-
-        for (let i = 0; i < el.length; i++) {
-            el[i].addEventListener("click", funcCheck, false);
-        }
-
-
-        var close_message = document.querySelector('.close_message');
-
-        close_message.addEventListener("click", function(event) {
-            this.parentElement.classList.toggle('show')
-        });
-
-    </script>
-
+    
+    <div class="save_box">
+        <img alt="" src="img/loader.png" class="loader_icon">
+        <p class="title">Saving</p>
+        <p class="text">Changes are being applied, please wait...</p>
+    </div>
+    
+    </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
